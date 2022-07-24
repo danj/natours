@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
-  background-color: $color-white;
+  background-color: rgba($color-white, .6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -16,7 +16,6 @@
     float: left;
     position: relative;
 
-    background-color: orangered;
     shape-outside: circle(50%);
     clip-path: circle(50%);
     transform: skewX(12deg) translateX(-3rem);
