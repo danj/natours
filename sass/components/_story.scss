@@ -24,6 +24,7 @@
       height: 120%;
       transition: all 0.5s ease-out;
       transform: translateX(-5.5rem);
+      backface-visibility: hidden;
     }
   }
 
