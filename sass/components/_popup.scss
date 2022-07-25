@@ -8,17 +8,18 @@
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s;
+  transition: all .5s;
 
   &__content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.01);
     box-shadow: 0 2rem 3rem rgba($color-black, .4);
     background-color: $color-white;
     border-radius: $border-radius;
     overflow: hidden;
+    transition: all .5s;
 
     width: 75%;
     min-width: 60rem;
@@ -27,6 +28,10 @@
   &:target {
     opacity: 1;
     visibility: visible;
+  }
+
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__left {
@@ -58,17 +63,18 @@
   &__close {
     &:link, &:visited {
       text-decoration: none;
-      color: $color-primary-dark;
+      color: $color-grey-dark;
       font-size: 2rem;
       font-weight: 700;
       position: absolute;
-      right: 3rem;
-      top: 2rem;
-      transition: all .3s;
+      right: 2.5rem;
+      top: 2.5rem;
+      transition: all .2s;
+      line-height: 1;
     }
 
     &:hover {
-      //top: 1.9rem;
+      color: $color-primary;
     }
 
     &:active {
