@@ -37,6 +37,10 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(tab-port-w) {
+      display: none;
+    }
   }
 
   &__right {
@@ -44,6 +48,10 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-land) {
+      padding: 2rem 5rem;
+    }
   }
 
   &__img {
@@ -58,6 +66,10 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(tab-land) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__close {
@@ -79,6 +91,12 @@
 
     &:active {
       top: 2.1rem;
+    }
+  }
+
+  @include respond(tab-land) {
+    .btn {
+      font-size: 1rem;
     }
   }
 }
